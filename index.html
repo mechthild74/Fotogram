@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon_fotogram.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+
+</head>
+
+<body onload="render()">
+
+    <header class="header">
+        <div class="content">
+            <img class="logo" src="./img/logo_fotogram.svg" alt="fotogram_logo">
+        </div>
+    </header>
+
+    <main class="content center">
+        
+        <h1>Where Music Comes Alive</h1>
+            <div id="album" class="album">
+             
+            </div>
+       </main>
+
+    <footer class="footer">
+        <div class="content">
+            <p>&copy; 2024 by Mechthild Rölfing</p>
+        </div>
+    </footer>
+
+     <div id="overlay" class="overlay" onclick="closeOverlay()">
+        <div class="overlay-content" onclick="event.stopPropagation()">
+            <div class="overlay-header">
+                <span id="overlayTitle" class="overlay-title"></span>
+                <button id="closeBtn" class="nav-btn" onclick="closeOverlay()">X</button>
+            </div>
+
+            <img id="overlayImage" class="overlay-image" src="" alt="Bild gross">
+
+            <div class="overlay-footer">
+                <button id="prevBtn" class="nav-btn" onclick="showPrevImage()"><</button>
+                <span id="overlayCounter"></span>
+                <button id="nextBtn" class="nav-btn" onclick="showNextImage()">></button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
